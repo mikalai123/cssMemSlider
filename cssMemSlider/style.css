@@ -21,10 +21,11 @@
   
   .slider {
     max-width: 62rem;
-    height: 64rem;
+    height: 42rem;
     margin: 0 auto;
     background-color: rgb(255, 255, 255);
     border: 0.3rem solid black;
+    border-radius: 1rem;
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: 53rem 11rem;
@@ -68,6 +69,9 @@
     transition: opacity 3s, visibility 3s;
     opacity: 0;
     overflow: hidden;
+    grid-row: 1/3;
+    grid-column: 1/3;
+    z-index: 1;
   }
   
   .slide__img {
@@ -81,12 +85,6 @@
     font-size: 1.6rem;
     padding-top: 2rem;
     background-color: white;
-  }
-  
-  .slide {
-    grid-row: 1/3;
-    grid-column: 1/3;
-    z-index: 1;
   }
   
   #img1 {
@@ -116,11 +114,10 @@
   .buttons {
     display: flex;
     height: 2.5rem;
-    grid-row: 2/3;
     grid-column: 2/3;
     justify-self: flex-end;
-    padding-top: 2.3rem;
     z-index: 100;
+    margin-top: -313px;
   }
 
   .buttons__button {
@@ -129,5 +126,12 @@
     border-radius: 50%;
     background-color: grey;
     cursor: pointer;
-    margin: 0.5rem;
+    border: 0.7rem solid white;
+  }
+  .buttons__button:hover {
+    background-color: aqua;
+  }
+  
+  .buttons__button:active {
+    background-color: yellow;
   }
